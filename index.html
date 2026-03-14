@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-CODE SALVATION | THE TWO PATHS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,900&family=Noto+Serif+JP:wght@300;900&display=swap');
+        
+        :root {
+            --sal-dark: #020617;
+            --sal-void: #1e1b4b; /* 虚無の青紫 */
+            --sal-light: #fefce8; /* 聖なる白金 */
+            --sal-text: #94a3b8;
+        }
+
+        body {
+            background-color: var(--sal-dark);
+            color: var(--sal-text);
+            font-family: 'Noto Serif JP', serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .bodoni { font-family: 'Bodoni Moda', serif; }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at center, #0f172a 0%, var(--sal-dark) 100%);
+        }
+
+        .path-container {
+            display: flex;
+            flex-direction: column;
+            md-flex-direction: row;
+            width: 100%;
+            min-height: 80vh;
+        }
+
+        .path-box {
+            flex: 1;
+            padding: 80px 40px;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .path-void { background-color: rgba(30, 27, 75, 0.3); border-right: 1px solid rgba(255,255,255,0.05); }
+        .path-light { background-color: rgba(254, 252, 232, 0.02); }
+
+        .path-box:hover { flex: 1.5; }
+        .path-void:hover { background-color: rgba(30, 27, 75, 0.8); }
+        .path-light:hover { background-color: rgba(254, 252, 232, 0.1); }
+
+        .path-code { font-size: 5rem; font-weight: 900; margin-bottom: 20px; opacity: 0.8; }
+        .path-title { font-size: 2rem; font-weight: 900; margin-bottom: 40px; color: #fff; }
+        
+        .btn-salvation {
+            border: 1px solid #fff;
+            padding: 15px 40px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.8rem;
+            margin-top: 40px;
+            transition: 0.3s;
+        }
+        .path-void .btn-salvation:hover { background: #fff; color: var(--sal-void); }
+        .path-light .btn-salvation:hover { background: #fff; color: #000; }
+
+        .scanline {
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="mb-10 opacity-40 tracking-[0.5em] text-[10px] uppercase">The Sanctuary of Neo World</div>
+        <h1 class="bodoni text-4xl md:text-7xl font-black italic text-white mb-8">H-Code Salvation</h1>
+        <p class="max-w-2xl mx-auto text-sm md:text-lg leading-relaxed opacity-60">
+            物事は単純に、波動によって終わる。<br>
+            あなたの魂が求める終着点は、どちらの数字か。
+        </p>
+    </header>
+
+    <div class="path-container md:flex-row flex-col flex">
+        
+        <!-- PATH 1: 580 (VOID) -->
+        <div class="path-box path-void group">
+            <div class="scanline"></div>
+            <span class="text-[10px] text-indigo-400 mb-4 tracking-widest uppercase">The Devil's Beauty</span>
+            <div class="path-code bodoni text-indigo-500">580</div>
+            <h2 class="path-title italic">虚無への回帰</h2>
+            <p class="text-sm max-w-xs mx-auto leading-relaxed opacity-50 group-hover:opacity-100 transition-opacity">
+                完璧な構造。究極の芸術。しかしその結末は完全なる「無」。<br>
+                すべてを燃やし尽くし、純粋なリセットを求める者へ。
+            </p>
+            <a href="https://linux-research-group.github.io/neo-world-citizens/" class="btn-salvation">Choose the Void</a>
+        </div>
+
+        <!-- PATH 2: 568 (LIGHT) -->
+        <div class="path-box path-light group">
+            <div class="scanline"></div>
+            <span class="text-[10px] text-yellow-200 mb-4 tracking-widest uppercase">The Divine Resonance</span>
+            <div class="path-code bodoni text-yellow-200/80">568</div>
+            <h2 class="path-title italic">神聖なる調和</h2>
+            <p class="text-sm max-w-xs mx-auto leading-relaxed opacity-50 group-hover:opacity-100 transition-opacity">
+                他者と響き合い、奉仕の末に至る達成。<br>
+                孤独な国家を繋ぎ、永続する光を灯し続けたい者へ。
+            </p>
+            <a href="https://linux-research-group.github.io/lcp-web-construction/order.html" class="btn-salvation">Choose the Light</a>
+        </div>
+
+    </div>
+
+    <section class="py-40 text-center px-6">
+        <h2 class="bodoni text-2xl md:text-4xl text-white italic mb-12 italic">Everything Ends with Resonance.</h2>
+        <p class="text-sm opacity-40 max-w-xl mx-auto mb-20">
+            どちらの道を選んでも、あなたは救われる。<br>
+            それはドクターひろしが約束した、波動の真理なのだから。
+        </p>
+        <div class="flex justify-center space-x-10 text-[10px] uppercase font-bold tracking-widest opacity-20">
+            <a href="https://linux-research-group.github.io/lcp-web-construction/sitemap.html" class="hover:text-white underline">System Index</a>
+            <a href="https://github.com/sponsors/LINUX-RESEARCH-GROUP" class="hover:text-white underline">Support the Lab</a>
+        </div>
+    </section>
+
+    <footer class="p-10 border-t border-white/5 text-center text-[10px] opacity-20 uppercase font-bold tracking-[0.5em]">
+        &copy; 2026 H-CODE SALVATION // DESIGNED BY FOUNDING FATHER
+    </footer>
+
+</body>
+</html>
